@@ -5,19 +5,19 @@ function HeroSection() {
     return (
         <>
             <section id="hero-section">
-                <div className="flex content-center">
-                    <div id="left" className="w-2/4 my-auto">
-                        <img src="../../img/logo.png" alt="" />
+                <div id="container-section" className="md:flex">
+                    <div id="left" className="md:w-2/4 md:my-auto">
+                        <img src="../../img/logo.png" alt="" className="self-center"/>
                         <TextTyping />
-                        <div className="py-5">
-                            <p className="rtw-button rounded-full my-2">
+                        <div id="tag" className="md:py-5 self-center">
+                            <p className="rtw-button rounded-full md:my-2 ">
                                 <span id="disponibile"></span>
                                 Disponibile per lavorare
                             </p>
                         </div>
-                        <div className="mt-5">
-                            <a href="" className="illuminated-button me-3">Contattami</a>
-                            <a href="" className="illuminated-button ms-3">CV</a>
+                        <div id="button-area" className="md:mt-5 self-center">
+                            <a href="" className="illuminated-button md:me-3">Contattami</a>
+                            <a href="" className="illuminated-button md:ms-3">CV</a>
                         </div>
                     </div>
                     <div id="right" className="w-2/4 my-auto hidden md:inline-block">

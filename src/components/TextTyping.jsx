@@ -56,7 +56,7 @@ function TextTyping() {
     }, []); // eseguo solo al montaggio
 
     return (
-        <div className="flex items-center justify-center font-mono">
+        <div className="md:flex md:items-center md:justify-center font-mono">
             <div className="typing-container">
                 <p id="typing-text">
                     {displayText}

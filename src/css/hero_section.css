@@ -3,14 +3,7 @@
 
 #hero-section {
     height: calc(100vh - 72px);
-
-    /* DEBUG */
 }
-
-/* section div {
-    width: 100%;
-    border: 2px solid red;
-} */
 
 #right img {
     margin: 10px auto 0;
@@ -173,7 +166,53 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    #container-section {
+        margin: 0 auto;
+    }
+
+    #container-section #left {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 50px;
+    }
+
+    #left img {
+        width: 30%;
+    }
+
+    #tag {
+        padding: 20px 0;
+    }
+
+    #button-area {
+        padding: 20px 0;
+    }
+
+    #button-area a:nth-child(1) {
+        margin-right: 10px;
+    }
+
+    #button-area a:nth-child(2) {
+        margin-left: 10px;
+    }
 }
 
 /* SMARTPHONE */
-@media screen and (max-width: 425px) {}
+@media screen and (max-width: 425px) {
+    #button-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #button-area a:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #button-area a:nth-child(2) {
+        margin-left: 0;
+    }
+
+}

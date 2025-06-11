@@ -41,21 +41,18 @@
     #typing-text {
         font-size: clamp(1.5rem, 3vw, 3rem);
     }
-
-    .typing-container {
-        max-width: 95%;
-    }
 }
 
 
 /* TABLET */
 @media (max-width: 768px) {
     #typing-text {
-        font-size: clamp(1.5rem, 7vw, 3rem);
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        text-align: center;
     }
 
     .typing-container {
-        max-width: 95%;
+        max-width: 100%;
     }
 }
 
