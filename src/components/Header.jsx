@@ -36,7 +36,7 @@ function Header() {
                     </div>
                     <div className="hidden md:flex md:gap-x-12">
                         <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Home</a>
-                        <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">About Me</a>
+                        <a href="#about-me" className="text-md/6 font-semibold hover:text-gray-300 link-hover">About Me</a>
                         <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Project</a>
                         <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Skills</a>
                         <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Contatti</a>
@@ -70,7 +70,7 @@ function Header() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Home</a>
-                                    <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>About Me</a>
+                                    <a href="#about-me" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>About Me</a>
                                     <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Project</a>
                                     <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Skills</a>
                                     <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Contatti</a>

@@ -1,0 +1,119 @@
+#about-me {
+
+    /* DEBUG */
+    border: 1px solid yellow;
+    min-height: 500px;
+}
+
+.am-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.am-photo {
+    width: 50%;
+
+    /* DEBUG */
+    border: 1px solid red;
+}
+
+.am-photo img {
+    width: 50%;
+}
+
+.hexagon-border {
+    width: 206px; /* 200px + 8px per il bordo */
+    height: 206px;
+    background: #fff; /* Colore del bordo */
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hexagon-border-1 {
+    content: "";
+    width: 212px; /* 200px + 8px per il bordo */
+    height: 212px;
+    background: #a1a0bd; /* Colore del bordo */
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hexagon-frame-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left, #4c11d6 0%, #5e0ced 100%);
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+    position: relative;
+    padding: 4px;
+}
+
+.hexagon-frame-1 img {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+.am-content {
+    width: 50%;
+}
+
+.align-right {
+    text-align: end;
+}
+
+.am-content h2 {
+    background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.align-right p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    /* max-width: 65ch; limita la lunghezza delle righe per leggibilità */
+    font-weight: 300;
+}
+
+.am-tab {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+}
+
+.am-tag {
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 5px solid #b3b3b3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+}
