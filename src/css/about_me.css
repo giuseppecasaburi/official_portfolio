@@ -1,10 +1,3 @@
-#about-me {
-
-    /* DEBUG */
-    border: 1px solid yellow;
-    min-height: 500px;
-}
-
 .am-container {
     width: 90%;
     margin: 0 auto;
@@ -14,18 +7,13 @@
 
 .am-photo {
     width: 50%;
-
-    /* DEBUG */
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
 }
 
-.am-photo img {
-    width: 50%;
-}
-
-.hexagon-border {
-    width: 206px; /* 200px + 8px per il bordo */
-    height: 206px;
+.hexagon-border-1 {
+    width: 410px; /* 200px + 6px per il bordo */
+    height: 410px;
     background: #fff; /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
@@ -34,10 +22,11 @@
     box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
 }
 
-.hexagon-border-1 {
+.hexagon-border {
+    overflow: visible;
     content: "";
-    width: 212px; /* 200px + 8px per il bordo */
-    height: 212px;
+    width: 420px; /* 200px + 12px per il bordo */
+    height: 420px;
     background: #a1a0bd; /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
@@ -47,8 +36,8 @@
 }
 
 .hexagon-frame-1 {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(to left, #4c11d6 0%, #5e0ced 100%);
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     position: relative;
@@ -61,7 +50,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+    object-position: top;
+    clip-path: polygon(
+        50% 0%,      /* centro in alto */
+        93.3% 25%,   /* alto a destra */
+        93.3% 75%,   /* basso a destra */
+        50% 100%,    /* centro in basso */
+        6.7% 75%,    /* basso a sinistra */
+        6.7% 25%     /* alto a sinistra */
+    );
 }
 
 .am-content {
