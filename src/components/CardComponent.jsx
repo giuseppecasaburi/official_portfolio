@@ -23,7 +23,7 @@ function CardComponent(projects) {
     };
 
     return (
-        <>            
+        <>
             {/* Card */}
             <div className="card">
                 <div className="top-card">
@@ -32,9 +32,17 @@ function CardComponent(projects) {
                     </div>
                 </div>
                 <div className="card-body">
-                    <img src={projects.Projects.logo} alt="" />
-                    <h3 className="cursor-pointer" onClick={openModal}>{projects.Projects.name}</h3>
-                    <a href="" className="card-btn">Visita Il Sito</a>
+                    <div className="top-body">
+                        {projects.Projects.tecnologie.map((tecnologia, index) => (
+                            <span className="card-btn">{tecnologia}</span>
+                        ))}
+                    </div>
+                    <div className="down-body">
+                        <img src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
+                        <h3 className="cursor-pointer" onClick={openModal}>{projects.Projects.name}</h3>
+                        <a href={projects.Projects.link} className="card-btn" target="_blank"
+                            rel="noopener noreferrer">Visita Il Sito</a>
+                    </div>
                 </div>
             </div>
 
@@ -45,34 +53,44 @@ function CardComponent(projects) {
                 <div className="modal-container inset-0" onClick={handleBackdropClick}>
                     <div className="modal">
                         {/* Header del modale */}
-                        <div className="flex justify-between items-center p-6 border-b">
-                            <h2 className="text-2xl font-bold text-gray-800">
-                                TITOLO ESTESO
-                            </h2>
+                        <div className="modal-header">
+                            <div className="flex items-center">
+                                <img className="w-15" src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
+                                <h2 className="text-2xl font-bold ps-3">
+                                    {projects.Projects.name}
+                                </h2>
+                            </div>
                             <button
                                 onClick={closeModal}
-                                className="text-gray-500 hover:text-gray-700 transition-colors"
+                                className="hover:text-gray-700 transition-colors"
                             >
                                 X
                             </button>
                         </div>
 
                         {/* Contenuto del modale */}
-                        <div className="p-6">
-                            <p className="text-gray-700 leading-relaxed mb-6">
-                                DESCRIZIONE ESTESA
+                        <div className="modal-content">
+                            <Carousel imgArr={projects.Projects.img} />
+                            <div className="top-body">
+                                {projects.Projects.tecnologie.map((tecnologia, index) => (
+                                    <span className="card-btn">{tecnologia}</span>
+                                ))}
+                            </div>
+                            <p className="whitespace-pre-wrap">
+                                {projects.Projects.descrizione}
                             </p>
-
-                            <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                                Dettagli aggiuntivi:
-                            </h3>
                         </div>
 
                         {/* Footer del modale */}
-                        <div className="p-6 border-t bg-gray-50 flex justify-end">
+                        <div className="p-6 border-t flex justify-end">
+                            <button
+                                className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+                            >
+                                Visita Il Sito
+                            </button>
                             <button
                                 onClick={closeModal}
-                                className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                                className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
                             >
                                 Chiudi
                             </button>
