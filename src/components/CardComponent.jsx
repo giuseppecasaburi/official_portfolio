@@ -1,6 +1,10 @@
 import { useState } from "react";
+import Carousel from "./Carousel";
 
-function CardComponent() {
+function CardComponent(projects) {
+
+    console.table(projects.Projects.name);
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -19,20 +23,22 @@ function CardComponent() {
     };
 
     return (
-        <>
+        <>            
             {/* Card */}
             <div className="card">
                 <div className="top-card">
                     <div className="img-container">
-                        <img src="http://placehold.co/600x400/png" alt="" />
+                        <Carousel imgArr={projects.Projects.img} />
                     </div>
                 </div>
                 <div className="card-body">
-                    <img src="http://placehold.co/60x60/png" alt="" />
-                    <h3 className="cursor-pointer" onClick={openModal}>Titolo Progetto</h3>
+                    <img src={projects.Projects.logo} alt="" />
+                    <h3 className="cursor-pointer" onClick={openModal}>{projects.Projects.name}</h3>
                     <a href="" className="card-btn">Visita Il Sito</a>
                 </div>
             </div>
+
+
 
             {/* Modale */}
             {isModalOpen && (
