@@ -1,9 +1,20 @@
+import CardComponent from "./CardComponent"
+
 function Projects() {
-    return(
+    return (
         <>
             <section id="projects-area">
-                <div className="setup-div">
-                    <h3 className="text-5xl text-center">Projects Area</h3>
+                <div className="pa-container">
+                    <h3 className="pa-title">Progetti</h3>
+                    <div className="row">
+                        <CardComponent />
+                        <CardComponent />
+                        <CardComponent />
+                        <CardComponent />
+                    </div>
+
+
+
                 </div>
             </section>
         </>

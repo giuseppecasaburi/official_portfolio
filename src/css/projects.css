@@ -1,10 +1,40 @@
+@import './cardcomponent.css';
+
 #projects-area {
     margin: 50px 0;
     padding: 20px 0;
 }
 
-.setup-div {
-    height: 500px;
+.pa-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    /* DEBUG */
+    /* border: 2px solid grey; */
+    min-height: 500px;
+}
+
+.pa-title {
+    background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
-    border: 2px solid grey;
+    margin: 20px 0;
 }
