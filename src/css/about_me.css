@@ -17,9 +17,11 @@
 }
 
 .hexagon-border-1 {
-    width: 410px; /* 200px + 6px per il bordo */
+    width: 410px;
+    /* 200px + 6px per il bordo */
     height: 410px;
-    background: #fff; /* Colore del bordo */
+    background: #fff;
+    /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
     align-items: center;
@@ -30,9 +32,11 @@
 .hexagon-border {
     overflow: visible;
     content: "";
-    width: 420px; /* 200px + 12px per il bordo */
+    width: 420px;
+    /* 200px + 12px per il bordo */
     height: 420px;
-    background: #a1a0bd; /* Colore del bordo */
+    background: #a1a0bd;
+    /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
     align-items: center;
@@ -56,25 +60,38 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    clip-path: polygon(
-        50% 0%,      /* centro in alto */
-        93.3% 25%,   /* alto a destra */
-        93.3% 75%,   /* basso a destra */
-        50% 100%,    /* centro in basso */
-        6.7% 75%,    /* basso a sinistra */
-        6.7% 25%     /* alto a sinistra */
-    );
+    clip-path: polygon(50% 0%,
+            /* centro in alto */
+            93.3% 25%,
+            /* alto a destra */
+            93.3% 75%,
+            /* basso a destra */
+            50% 100%,
+            /* centro in basso */
+            6.7% 75%,
+            /* basso a sinistra */
+            6.7% 25%
+            /* alto a sinistra */
+        );
 }
 
 .am-content {
     width: 50%;
 }
 
+.title-section {
+    display: none;
+}
+
+.title-section-desktop {
+    display: block;
+}
+
 .align-right {
     text-align: end;
 }
 
-.am-content h2 {
+.am-title {
     background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
     display: inline-block;
     padding: 1rem 1rem;
@@ -99,6 +116,14 @@
     font-weight: 300;
 }
 
+.tag-section-desktop {
+    display: block;
+}
+
+.tag-section {
+    display: none;
+}
+
 .am-tab {
     display: flex;
     align-items: end;
@@ -118,4 +143,127 @@
     padding: 4px 20px;
     margin: 10px 0;
     border-radius: 50px;
+}
+
+
+/* RESPONSIVE    */
+/* < 1024px */
+@media screen and (max-width: 1024px) {
+    /* #about-me {
+        background-image:
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.4) 5%,
+                rgba(0, 0, 0, 0.6) 10%,
+                rgba(0, 0, 0, 0.8) 15%,
+                rgba(0, 0, 0, 0.8) 90%,
+                rgba(0, 0, 0, 0) 100%);
+    } */
+
+    .am-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .am-photo {
+        width: 100%;
+        order: 1;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .title-section {
+        display: block;
+        text-align: center;
+        order: 0;
+    }
+
+    .am-title {
+        display: inline-block;
+        border-radius: 50px;
+    }
+
+    .title-section-desktop {
+        display: none;
+    }
+
+    .text-section {
+        order: 3;
+    }
+
+    .am-content {
+        width: 100%;
+    }
+
+    .align-right {
+        text-align: center;
+    }
+
+    .tag-section-desktop {
+        display: none;
+    }
+
+    .tag-section {
+        display: block;
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    .am-tab {
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .am-tag {
+        margin: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .hexagon-border-1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hexagon-border {
+        width: 360px;
+        height: 360px;
+    }
+
+    .hexagon-frame-1 {
+        width: 340px;
+        height: 340px;
+    }
+
+    .am-tab {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .am-tag {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .am-title {
+        padding: 0.8rem 0.8rem;
+        font-size: 1.6rem;
+    }
+
+    .hexagon-border-1 {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hexagon-border {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hexagon-frame-1 {
+        width: 250px;
+        height: 250px;
+    }
 }
