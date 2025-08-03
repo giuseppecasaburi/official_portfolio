@@ -4,7 +4,7 @@
 }
 
 .slider-container {
-    height: 300px;
+    height: 200px; /* Iniziale 300px */
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -12,7 +12,7 @@
 
 .slider-track {
     display: flex;
-    height: 300px;
+    height: 200px; /* Iniziale 300px */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -20,10 +20,6 @@
     width: 100%;
     flex-shrink: 0;
 }
-
-/* .slide .mc-card .top .img img {
-    object-fit: cover;
-} */
 
 .nav-button {
     position: absolute;
@@ -107,11 +103,11 @@
 
 @media (max-width: 480px) {
     .slider-container {
-        height: 500px;
+        height: 200px;
     }
 
     .slider-track {
-        height: 500px;
+        height: 200px;
     }
 
     .nav-button {

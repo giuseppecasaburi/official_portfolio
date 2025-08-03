@@ -24,7 +24,8 @@ function CardComponent(projects) {
 
     return (
         <>
-            {/* Card */}
+            {/* Card V1 */}
+            {/*
             <div className="card">
                 <div className="top-card">
                     <div className="img-container">
@@ -42,6 +43,38 @@ function CardComponent(projects) {
                         <h3 className="cursor-pointer" onClick={openModal}>{projects.Projects.name}</h3>
                         <a href={projects.Projects.link} className="card-btn" target="_blank"
                             rel="noopener noreferrer">Visita Il Sito</a>
+                    </div>
+                </div>
+            </div>
+            */}
+
+            {/* Card V2 */}
+            <div className="card">
+                <div className="title-part">
+                    <img src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
+                    <h3>{projects.Projects.name}</h3>
+                </div>
+                <div className="carousel">
+                    <div className="img-container">
+                        <Carousel imgArr={projects.Projects.img} />
+                    </div>
+                </div>
+                <div className="card-body">
+                    <div className="tag-area">
+                        {projects.Projects.tecnologie.map((tecnologia, index) => (
+                            <span className="card-btn">{tecnologia}</span>
+                        ))}
+                    </div>
+                    <div className="middle-part">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi excepturi vitae amet aspernatur quisquam hic id molestiae doloribus quod alias reprehenderit ducimus cum eos eligendi, consequuntur, consequatur suscipit temporibus. <span className="load-more" onClick={openModal}>Load more...</span></p>
+                    </div>
+                    <div className="end-part">
+                        <a href={projects.Projects.link_repo} className="illuminated-button ms-btn-d" target="_blank"
+                            rel="noopener noreferrer">GitHub
+                        </a>
+                        <a href={projects.Projects.link_demo} className="illuminated-button ms-btn-d" target="_blank"
+                            rel="noopener noreferrer">Demo
+                        </a>
                     </div>
                 </div>
             </div>
@@ -70,12 +103,6 @@ function CardComponent(projects) {
 
                         {/* Contenuto del modale */}
                         <div className="modal-content">
-                            <Carousel imgArr={projects.Projects.img} />
-                            <div className="top-body">
-                                {projects.Projects.tecnologie.map((tecnologia, index) => (
-                                    <span className="card-btn">{tecnologia}</span>
-                                ))}
-                            </div>
                             <p className="whitespace-pre-wrap">
                                 {projects.Projects.descrizione}
                             </p>
@@ -83,6 +110,7 @@ function CardComponent(projects) {
 
                         {/* Footer del modale */}
                         <div className="p-6 border-t flex justify-end">
+                            {/*
                             <button
                                 className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
                             >
@@ -93,6 +121,9 @@ function CardComponent(projects) {
                                 className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
                             >
                                 Chiudi
+                            </button>
+                            */ }
+                            <button onClick={closeModal} className="illuminated-button ms-btn-d">Chiudi
                             </button>
                         </div>
                     </div>
