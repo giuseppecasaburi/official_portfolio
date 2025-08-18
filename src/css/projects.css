@@ -34,11 +34,13 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
     margin: 20px 0;
 }
 
-@media screen and (max-width: 1024px) {
-    
+@media screen and (max-width: 425px) {
+    .row {
+        justify-content: center;
+    }
 }

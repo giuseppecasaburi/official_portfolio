@@ -2,7 +2,7 @@
 @import './carousel_img.css';
 
 .card {
-    width: calc((100% - 20px)/ 3);
+    width: calc((100% - 40px)/ 3);
     /* height: 680px; */
     padding: 5px;
     background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
@@ -109,8 +109,82 @@
     border-bottom: 1px solid #fff;
 }
 
+.cross-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+    width: 45%;
+    font-weight: bold;
+    color: blue;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.card-button:hover {
+    transform: translateY(-2px);
+    background-color: #d0d3d6;
+}
+
+.cross-button:hover {
+    background-color: #d0d3d6;
+}
+
+/* CONTENT E SCROLLBAR */
 .modal-content {
     padding: 20px;
+    height: 400px;
+    overflow: auto;
+}
+
+/* Firefox */
+.modal-content {
+    scrollbar-width: thin;
+    scrollbar-color: #9aa4b2 #e9ecf1;
+}
+
+/* Chromium/WebKit */
+.modal-content::-webkit-scrollbar {
+    width: 10px;
+    /* spessore barra */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #e9ecf1;
+    /* traccia */
+    border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #9aa4b2;
+    /* pollice */
+    border-radius: 8px;
+    border: 2px solid #e9ecf1;
+    /* bordo per creare “spazio” visivo */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #7e8896;
 }
 
 @media screen and (max-width: 1024px) {
@@ -129,10 +203,31 @@
 }
 
 @media screen and (max-width: 425px) {
+    .modal-header img {
+        display: none;
+    }
+
+    .modal-header h2 {
+        padding: 0;
+    }
+
     .card {
         width: calc((100% - 20px)/ 1);
         padding: 5px;
         background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
         border-radius: 20px;
+    }
+
+    .card-button {
+        width: 80%;
+    }
+
+    .end-part {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .end-part :nth-child(n) {
+        margin: 5px 0;
     }
 }

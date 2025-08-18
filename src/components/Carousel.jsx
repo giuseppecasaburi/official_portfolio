@@ -58,15 +58,13 @@ function Carousel({ imgArr }) {
                     >
                         {imgArr.map((img, index) => (
                             <div key={index} className="slide">
-                                <div className="mc-card">
-                                    <div className="top">
-                                        <div className="img">
-                                            <img
-                                                src={img}
-                                                alt="Ciao"
-                                                onClick={openModal}
-                                            />
-                                        </div>
+                                <div className="top">
+                                    <div className="img">
+                                        <img
+                                            src={img}
+                                            alt="Ciao"
+                                            onClick={openModal}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +113,7 @@ function Carousel({ imgArr }) {
                 <div className="modal-container inset-0" onClick={handleBackdropClick}>
                     <div className="modal-img">
                         {/* Contenuto del modale */}
-                        <div className="modal-content">
+                        <div className="modal-content-img">
                             <div className="slider-wrapper">
                                 <div className="slider-container-img">
                                     <div
@@ -159,7 +157,7 @@ function Carousel({ imgArr }) {
                                     onClick={closeModal}
                                     className="nav-button cross-button"
                                 >
-                                    <FontAwesomeIcon icon={faTimes} color="blue"/>
+                                    <FontAwesomeIcon icon={faTimes} color="blue" />
                                 </button>
                             </div>
 

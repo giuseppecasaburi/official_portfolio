@@ -105,6 +105,10 @@
     border-radius: 20px;
 }
 
+.modal-content-img {
+    padding: 20px;
+}
+
 .img-modal {
     height: 100%;
     display: flex;

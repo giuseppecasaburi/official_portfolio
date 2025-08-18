@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Carousel from "./Carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function CardComponent(projects) {
 
@@ -67,10 +69,10 @@ function CardComponent(projects) {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi excepturi vitae amet aspernatur quisquam hic id molestiae doloribus quod alias reprehenderit ducimus cum eos eligendi, consequuntur, consequatur suscipit temporibus. <span className="load-more" onClick={openModal}>Load more...</span></p>
                     </div>
                     <div className="end-part">
-                        <a href={projects.Projects.link_repo} className="illuminated-button ms-btn-d" target="_blank"
+                        <a href={projects.Projects.link_repo} className="card-button" target="_blank"
                             rel="noopener noreferrer">GitHub
                         </a>
-                        <a href={projects.Projects.link_demo} className="illuminated-button ms-btn-d" target="_blank"
+                        <a href={projects.Projects.link_demo} className="card-button" target="_blank"
                             rel="noopener noreferrer">Demo
                         </a>
                     </div>
@@ -93,9 +95,9 @@ function CardComponent(projects) {
                             </div>
                             <button
                                 onClick={closeModal}
-                                className="hover:text-gray-700 transition-colors"
+                                className="cross-button"
                             >
-                                X
+                                <FontAwesomeIcon icon={faTimes} color="blue"/>
                             </button>
                         </div>
 
@@ -107,21 +109,8 @@ function CardComponent(projects) {
                         </div>
 
                         {/* Footer del modale */}
-                        <div className="p-6 border-t flex justify-end">
-                            {/*
-                            <button
-                                className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
-                            >
-                                Visita Il Sito
-                            </button>
-                            <button
-                                onClick={closeModal}
-                                className="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
-                            >
-                                Chiudi
-                            </button>
-                            */ }
-                            <button onClick={closeModal} className="illuminated-button ms-btn-d">Chiudi
+                        <div className="p-6 border-t flex justify-center">
+                            <button onClick={closeModal} className="card-button">Chiudi
                             </button>
                         </div>
                     </div>
