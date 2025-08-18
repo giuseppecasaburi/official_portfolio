@@ -1,4 +1,5 @@
 @import './carousel.css';
+@import './carousel_img.css';
 
 .card {
     width: calc((100% - 20px)/ 3);
@@ -89,7 +90,7 @@
     align-items: center;
     position: fixed;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .modal {

@@ -3,8 +3,6 @@ import Carousel from "./Carousel";
 
 function CardComponent(projects) {
 
-    console.table(projects.Projects.name);
-
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
