@@ -1,9 +1,64 @@
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 function Contacts() {
     return (
         <>
             <section id="contacts-area">
-                <div className="setup-div">
-                    <h3 className="text-5xl text-center">Contacts Area</h3>
+                <div className="cont-area">
+                    <div className="title-section">
+                        <h3 className="am-title">Contatti</h3>
+                    </div>
+                    <div className="title-section-desktop">
+                        <h3 className="pa-title">Contatti</h3>
+                    </div>
+                    <div className="cont-content">
+                        <div className="tag-info">
+                            <div className="inv-card">
+                                <div className="cont-icon">
+                                    <FontAwesomeIcon icon={faPhone} color="blue" />
+                                </div>
+                                <div className="cont-content">
+                                    <p>Telefono</p>
+                                    <a href="tel:+393668061024">+39 366 80 61 024</a>
+                                </div>
+                            </div>
+                            <div className="inv-card">
+                                <div className="cont-icon">
+                                    <FontAwesomeIcon icon={faEnvelope} color="blue" />
+                                </div>
+                                <div className="cont-content">
+                                    <p>Email</p>
+                                    <a href="mailto:giuseppe.casaburi96@gmail.com">giuseppe.casaburi96@gmail.com</a>
+                                </div>
+                            </div>
+                            <div className="inv-card">
+                                <div className="cont-icon">
+                                    <i class="devicon-linkedin-plain"></i>
+                                </div>
+                                <div className="cont-content">
+                                    <a href="www.linkedin.com/in/giuseppe-casaburi-32b91a188" target="_blank"
+                                        rel="noopener noreferrer">Linkedin</a>
+                                </div>
+                            </div>
+                            <div className="inv-card">
+                                <div className="cont-icon">
+                                    <FontAwesomeIcon icon={faLocationDot} color="blue" />
+                                </div>
+                                <div className="cont-content">
+                                    <p>Località</p>
+                                    <p>Napoli (NA)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="">
+                            <h3>Form Contact</h3>
+                        </div>
+                        <div className="">
+                            <p>Mappa</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
