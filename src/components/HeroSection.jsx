@@ -8,7 +8,7 @@ function HeroSection() {
             <section id="hero-section">
                 <div id="container-section" className="md:flex">
                     <div id="left" className="md:my-auto">
-                        <img src="../../img/logo.png" alt="" className="self-center"/>
+                        <img src="../../img/logo.png" alt="Logo del profilo" className="self-center"/>
                         <TextTyping />
                         <div id="tag" className="md:py-5">
                             <span className="rtw-button ms-btn-d rounded-full md:my-1">
@@ -17,12 +17,13 @@ function HeroSection() {
                             </span>
                         </div>
                         <div id="button-area" className="md:mt-2">
-                            <a href="" className="illuminated-button ms-btn-d "><CiMail id="contact" size={20} className="inline-block "/> <span className="inline-block text-center">Contattami</span></a>
-                            <a href="" className="illuminated-button ms-btn-d md:ms-3"><FaRegFilePdf size={20} className="inline-block "/> <span className="inline-block text-center">CV</span></a>
+                            <a href="#contacts-area" className="illuminated-button ms-btn-d "><CiMail id="contact" size={20} className="inline-block "/> <span className="inline-block text-center">Contattami</span></a>
+                            <a href="https://www.linkedin.com/in/giuseppe-casaburi-32b91a188/overlay/1748619344495/single-media-viewer/?profileId=ACoAACxGQlMBIO0D62TIe2vsmxbZ1BGUm7C95Jc" target="_blank"
+                            rel="noopener noreferrer" className="illuminated-button ms-btn-d md:ms-3"><FaRegFilePdf size={20} className="inline-block "/> <span className="inline-block text-center">CV</span></a>
                         </div>
                     </div>
                     <div id="right" className="my-auto ">
-                        <img src="../../img/pc_sfondo_1.png" alt="" />
+                        <img src="../../img/pc_sfondo_1.png" alt="Immagine di design che rappresenta un computer" />
                     </div>
                 </div>
                 <button className="mb-5 absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center show-more rounded-full scroll-button">

@@ -36,7 +36,7 @@ function Contacts() {
                             </div>
                             <div className="inv-card">
                                 <div className="cont-icon">
-                                    <i class="devicon-linkedin-plain"></i>
+                                    <i className="devicon-linkedin-plain"></i>
                                 </div>
                                 <div className="cont-content">
                                     <a href="www.linkedin.com/in/giuseppe-casaburi-32b91a188" target="_blank"

@@ -15,7 +15,6 @@ function CardComponent(projects) {
         setIsModalOpen(false);
     };
 
-    // Gestisce la chiusura del modale quando si clicca fuori
     const handleBackdropClick = (e) => {
         if (e.target === e.currentTarget) {
             closeModal();
@@ -24,31 +23,6 @@ function CardComponent(projects) {
 
     return (
         <>
-            {/* Card V1 */}
-            {/*
-            <div className="card">
-                <div className="top-card">
-                    <div className="img-container">
-                        <Carousel imgArr={projects.Projects.img} />
-                    </div>
-                </div>
-                <div className="card-body">
-                    <div className="top-body">
-                        {projects.Projects.tecnologie.map((tecnologia, index) => (
-                            <span className="card-btn">{tecnologia}</span>
-                        ))}
-                    </div>
-                    <div className="down-body">
-                        <img src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
-                        <h3 className="cursor-pointer" onClick={openModal}>{projects.Projects.name}</h3>
-                        <a href={projects.Projects.link} className="card-btn" target="_blank"
-                            rel="noopener noreferrer">Visita Il Sito</a>
-                    </div>
-                </div>
-            </div>
-            */}
-
-            {/* Card V2 */}
             <div className="card">
                 <div className="title-part">
                     <img src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
@@ -62,11 +36,11 @@ function CardComponent(projects) {
                 <div className="card-body">
                     <div className="tag-area">
                         {projects.Projects.tecnologie.map((tecnologia, index) => (
-                            <span className="card-btn">{tecnologia}</span>
+                            <span key={index} className="card-btn">{tecnologia}</span>
                         ))}
                     </div>
                     <div className="middle-part">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi excepturi vitae amet aspernatur quisquam hic id molestiae doloribus quod alias reprehenderit ducimus cum eos eligendi, consequuntur, consequatur suscipit temporibus. <span className="load-more" onClick={openModal}>Load more...</span></p>
+                        <p>{projects.Projects.descrizione.slice(0, 180)}... <span className="load-more" onClick={openModal}>Continua a leggere</span></p>
                     </div>
                     <div className="end-part">
                         <a href={projects.Projects.link_repo} className="card-button" target="_blank"
@@ -85,7 +59,7 @@ function CardComponent(projects) {
             {isModalOpen && (
                 <div className="modal-container inset-0" onClick={handleBackdropClick}>
                     <div className="modal">
-                        {/* Header del modale */}
+                        {/* Header */}
                         <div className="modal-header">
                             <div className="flex items-center">
                                 <img className="w-15" src={projects.Projects.logo} alt={`Logo del progetto {projects.Projects.name}`} />
@@ -97,18 +71,18 @@ function CardComponent(projects) {
                                 onClick={closeModal}
                                 className="cross-button"
                             >
-                                <FontAwesomeIcon icon={faTimes} color="blue"/>
+                                <FontAwesomeIcon icon={faTimes} color="blue" />
                             </button>
                         </div>
 
-                        {/* Contenuto del modale */}
+                        {/* Contenuto */}
                         <div className="modal-content">
                             <p className="whitespace-pre-wrap">
                                 {projects.Projects.descrizione}
                             </p>
                         </div>
 
-                        {/* Footer del modale */}
+                        {/* Footer */}
                         <div className="p-6 border-t flex justify-center">
                             <button onClick={closeModal} className="card-button">Chiudi
                             </button>

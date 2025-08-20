@@ -18,10 +18,8 @@
 
 .hexagon-border-1 {
     width: 410px;
-    /* 200px + 6px per il bordo */
     height: 410px;
     background: #fff;
-    /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
     align-items: center;
@@ -33,10 +31,8 @@
     overflow: visible;
     content: "";
     width: 420px;
-    /* 200px + 12px per il bordo */
     height: 420px;
     background: #a1a0bd;
-    /* Colore del bordo */
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     display: flex;
     align-items: center;
@@ -112,7 +108,6 @@
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    /* max-width: 65ch; limita la lunghezza delle righe per leggibilità */
     font-weight: 300;
 }
 
@@ -147,19 +142,7 @@
 
 
 /* RESPONSIVE    */
-/* < 1024px */
 @media screen and (max-width: 1024px) {
-    /* #about-me {
-        background-image:
-            linear-gradient(to bottom,
-                rgba(0, 0, 0, 0) 0%,
-                rgba(0, 0, 0, 0.4) 5%,
-                rgba(0, 0, 0, 0.6) 10%,
-                rgba(0, 0, 0, 0.8) 15%,
-                rgba(0, 0, 0, 0.8) 90%,
-                rgba(0, 0, 0, 0) 100%);
-    } */
-
     .am-container {
         display: flex;
         flex-direction: column;

@@ -29,8 +29,8 @@ function Skills() {
                             ))}
                         </div>
                         <div className="box-section">
-                            {skills[selected].map((skill) => (
-                                <div className="box">
+                            {skills[selected].map((skill, index) => (
+                                <div key={index} className="box">
                                     <div className="box-content">
                                         <div className="icon">{skill.icon}</div>
                                         <p>{skill.name}</p>

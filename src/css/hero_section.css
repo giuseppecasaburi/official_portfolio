@@ -1,6 +1,5 @@
 @import './text_typing.css';
 
-
 #hero-section {
     height: calc(100vh - 72px);
 }
@@ -46,7 +45,6 @@
         0 0 20px rgba(195, 95, 184, 0.6),
         0 0 40px rgba(77, 17, 216, 0.4),
         0 0 60px rgba(195, 95, 184, 0.2);
-    /* animazione di pulsazione */
     animation: pulse 1.5s ease-in-out infinite;
 }
 
@@ -76,8 +74,6 @@
     }
 }
 
-
-/* Bottone principale con illuminazione */
 .illuminated-button {
     display: inline-block;
     position: relative;
@@ -93,11 +89,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-
-    /* Gradiente base da destra a sinistra */
     background: linear-gradient(to right, #c35fb8 0%, #4d11d8 100%);
-
-    /* Contorno illuminato esterno */
     box-shadow:
         0 0 20px rgba(195, 95, 184, 0.6),
         0 0 40px rgba(77, 17, 216, 0.4),
@@ -145,7 +137,6 @@
 
 
 /* RESPONSIVE    */
-/* DESKTOP */
 @media screen and (max-width: 1024px) {
     .rtw-button {
         font-size: 0.8rem;
@@ -157,7 +148,6 @@
     }
 }
 
-/* TABLET */
 @media screen and (max-width: 768px) {
     #hero-section {
         height: calc(100vh - 80px);
@@ -223,7 +213,6 @@
     }
 }
 
-/* SMARTPHONE */
 @media screen and (max-width: 440px) {
     #left img {
         width: 45%;

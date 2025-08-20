@@ -35,16 +35,13 @@
 }
 
 
-/* Responsive breakpoints */
-/* DESKTOP */
+/* Responsive */
 @media (max-width: 1024px) {
     #typing-text {
         font-size: clamp(1.5rem, 3vw, 3rem);
     }
 }
 
-
-/* TABLET */
 @media (max-width: 768px) {
     #typing-text {
         font-size: clamp(1.5rem, 6vw, 3rem);
@@ -56,8 +53,6 @@
     }
 }
 
-
-/* SMARTPHONE */
 @media (max-width: 425px) {
     #typing-text {
         font-size: clamp(1.3rem, 8vw, 2.2rem);

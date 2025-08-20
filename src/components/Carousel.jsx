@@ -1,9 +1,7 @@
-import { faArrowRight, faCross, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
-import { FaXmark } from 'react-icons/fa6';
 
 function Carousel({ imgArr }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,8 +22,6 @@ function Carousel({ imgArr }) {
         setCurrentIndex(index);
     };
 
-
-
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -36,15 +32,11 @@ function Carousel({ imgArr }) {
         setIsModalOpen(false);
     };
 
-    // Gestisce la chiusura del modale quando si clicca fuori
     const handleBackdropClick = (e) => {
         if (e.target === e.currentTarget) {
             closeModal();
         }
     };
-
-
-
 
     return (
         <>
@@ -62,7 +54,7 @@ function Carousel({ imgArr }) {
                                     <div className="img">
                                         <img
                                             src={img}
-                                            alt="Ciao"
+                                            alt="Immagine del progetto"
                                             onClick={openModal}
                                         />
                                     </div>
@@ -112,7 +104,7 @@ function Carousel({ imgArr }) {
             {isModalOpen && (
                 <div className="modal-container inset-0" onClick={handleBackdropClick}>
                     <div className="modal-img">
-                        {/* Contenuto del modale */}
+                        {/* Contenuto */}
                         <div className="modal-content-img">
                             <div className="slider-wrapper">
                                 <div className="slider-container-img">
@@ -128,7 +120,7 @@ function Carousel({ imgArr }) {
                                                     <img
                                                         className="img-modal"
                                                         src={img}
-                                                        alt="Ciao"
+                                                        alt="Immagine del progetto"
                                                         onClick={openModal}
                                                     />
                                                 </div>

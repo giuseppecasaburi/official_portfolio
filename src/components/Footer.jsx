@@ -11,7 +11,7 @@ function Footer() {
                         <a className="link-header" href="#contacts-area">Contatti</a>
                     </div>
                     <div className="logo">
-                        <img src="./img/logo.png" alt="" />
+                        <img src="./img/logo.png" alt="Logo del profilo" />
                     </div>
                     <div className="policy">
                         <p>© 2025 Giuseppe Casaburi - Tutti i diritti riservati.</p>

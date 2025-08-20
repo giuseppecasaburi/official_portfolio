@@ -16,7 +16,7 @@ function AboutMe() {
                         <div className="hexagon-border">
                             <div className="hexagon-border-1">
                                 <div className="hexagon-frame-1">
-                                    <img src="../../img/foto_personale.png" alt="" />
+                                    <img src="./img/foto_personale.png" alt="Foto profilo personale" />
                                 </div>
                             </div>
                         </div>
