@@ -2,6 +2,7 @@ import AboutMe from "../components/AboutMe";
 import Contacts from "../components/Contacts";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 import Skills from "../components/Skills";
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
             <Projects/>
             <Skills/>
             <Contacts/>
+            <ScrollToTopButton/>
         </>
     )
 }

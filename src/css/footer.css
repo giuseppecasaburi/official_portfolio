@@ -2,14 +2,23 @@
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 15px;
 }
 
 .footer-container img {
     width: 20%;
+    max-width: 100px;
+    height: auto;
 }
 
-.footer-container div {
-    width: calc((100% - 20px) / 3);
+.footer-container div:nth-child(odd) {
+    width: 40%;
+    min-width: 200px;
+}
+
+.footer-container div:nth-child(even) {
+    width: calc(20% - 40px);
 }
 
 .link {
@@ -17,19 +26,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .link a {
-    margin: 0 10px;
+    margin: 5px;
+    white-space: nowrap;
 }
 
 .link-header {
     position: relative;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 5px;
 }
 
 .link-header::after {
@@ -50,18 +63,90 @@
 }
 
 .link-header:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .logo {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    align-items: center;
+    padding: 50px 10px;
 }
 
 .policy {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 10px;
+    text-align: center;
+}
+
+.policy p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 820px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .footer-container div:nth-child(odd) {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    .footer-container div:nth-child(even) {
+        width: 100%;
+    }
+
+    .link {
+        padding: 30px 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .link a {
+        margin: 5px 0;
+    }
+
+    .link-header:hover {
+        transform: scale(1.02);
+    }
+
+    .logo,
+    .policy {
+        padding: 30px 10px;
+    }
+
+    .footer-container img {
+        width: 60px;
+    }
+
+    .policy p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .link-header {
+        font-size: 14px;
+    }
+
+    .footer-container img {
+        width: 50px;
+    }
+
+    .policy p {
+        font-size: 12px;
+    }
+
+    .link,
+    .logo,
+    .policy {
+        padding: 20px 5px;
+    }
 }
