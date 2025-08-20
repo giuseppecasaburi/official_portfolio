@@ -1,3 +1,67 @@
-footer {
-    border: 1px solid yellow;
+.footer-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.footer-container img {
+    width: 20%;
+}
+
+.footer-container div {
+    width: calc((100% - 20px) / 3);
+}
+
+.link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.link a {
+    margin: 0 10px;
+}
+
+.link-header {
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.link-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.link-header:hover::after {
+    background-color: white;
+    width: 100%;
+}
+
+.link-header:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
 }

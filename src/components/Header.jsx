@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <>
-            <header>
+            <header id='header'>
                 <nav className="mx-auto flex max-w-7xl items-center justify-between text-white p-6 md:px-8" aria-label="Global">
                     <div className="flex md:flex-1">
                         <a href="#" className="md:hidden -m-1.5 p-1.5">
@@ -35,11 +35,11 @@ function Header() {
                         </button>
                     </div>
                     <div className="hidden md:flex md:gap-x-12">
-                        <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Home</a>
-                        <a href="#about-me" className="text-md/6 font-semibold hover:text-gray-300 link-hover">About Me</a>
-                        <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Project</a>
-                        <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Skills</a>
-                        <a href="#" className="text-md/6 font-semibold hover:text-gray-300 link-hover">Contatti</a>
+                        <a className="link-header" href="#header">Home</a>
+                        <a className="link-header" href="#about-me">About Me</a>
+                        <a className="link-header" href="#projects-area">Progetti</a>
+                        <a className="link-header" href="#skills-area">Skills</a>
+                        <a className="link-header" href="#contacts-area">Contatti</a>
                     </div>
                     <div className="hidden md:flex md:flex-1 md:justify-end">
                         <FaRegLightbulb size={24} color="white" />
@@ -69,11 +69,11 @@ function Header() {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Home</a>
+                                    <a href="#header" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Home</a>
                                     <a href="#about-me" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>About Me</a>
-                                    <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Project</a>
-                                    <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Skills</a>
-                                    <a href="#" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Contatti</a>
+                                    <a href="#projects-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Project</a>
+                                    <a href="#skills-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Skills</a>
+                                    <a href="#contacts-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Contatti</a>
                                 </div>
                                 <div className="py-6">
                                     <FaRegLightbulb size={24} color="white" onClick={closeMenu}/>
