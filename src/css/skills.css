@@ -52,6 +52,13 @@
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle at center, #5f0ced7e 0%, #4c11d650 100%);
+    transition: 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    border: 1px solid #fff;
+    transition: 0.2s ease-in-out;
 }
 
 .box-content {

@@ -1,5 +1,6 @@
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FormContact from "./FormContact";
 
 
 function Contacts() {
@@ -52,11 +53,14 @@ function Contacts() {
                                 </div>
                             </div>
                         </div>
-                        <div className="">
-                            <h3>Form Contact</h3>
-                        </div>
-                        <div className="">
-                            <p>Mappa</p>
+                        <div className="cont-form">
+                            <div className="header">
+                                <h3>Invia email</h3>
+                                <p>Hai un progetto in mente o una collaborazione da propormi? Compila il form e ti risponderò al più presto!</p>
+                            </div>
+                            <div className="form-content">
+                                <FormContact/>
+                            </div>
                         </div>
                     </div>
                 </div>

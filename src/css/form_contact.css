@@ -1,0 +1,46 @@
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.user-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.primi {
+    width: calc((100% - 20px) / 2);
+    margin: 5px 0;
+}
+
+.user-data label,
+.mess-area label {
+    display: block;
+    padding: 10px 10px;
+}
+
+.user-data input,
+.mess-area textarea {
+    background-color: white;
+    color: blue;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.mess-area textarea {
+    min-height: fit-content;
+}
+
+.form-button {
+    width: 100%;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .primi {
+        width: 100%;
+    }
+}

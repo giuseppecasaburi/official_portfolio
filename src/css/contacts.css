@@ -1,3 +1,5 @@
+@import './form_contact.css';
+
 #contacts-area {
     margin: 50px 0;
     padding: 20px 0;
@@ -56,6 +58,40 @@ i {
 
 a {
     overflow-wrap: break-word;
+    transition: 0.2s ease-in-out;
+}
+
+.tag-info a:hover {
+    color: blue;
+    transition: 0.2s ease-in-out;
+}
+
+.cont-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h3 {
+    display: inline-block;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-emphasis: none;
+}
+
+.form-content {
+    width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
