@@ -1,11 +1,12 @@
 #skills-area {
-    margin: 50px 0;
+    margin: 100px 0;
     padding: 20px 0;
 }
 
 .sa-container {
     width: 90%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 #sa-title-area {

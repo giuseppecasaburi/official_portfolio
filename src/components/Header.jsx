@@ -116,7 +116,7 @@ function Header() {
             
             {/* Spacer per evitare il salto quando diventa fixed */}
             {isSticky && (
-                <div style={{ height: headerHeight }} />
+                <div style={{ height: "72px" }} />
             )}
         </>
     )

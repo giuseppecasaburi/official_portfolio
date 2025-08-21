@@ -37,7 +37,10 @@ function AboutMe() {
                         </div>
 
                         <div className="align-right">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur rerum beatae architecto repellat, quibusdam officia sed eum error ipsum odio numquam quidem temporibus fugiat nulla, iusto, non labore eveniet maxime. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem culpa atque sit blanditiis vel accusamus reprehenderit? Consequuntur omnis voluptatibus minima praesentium, suscipit neque molestiae at aliquam. Iste maiores libero nostrum?</p>
+                            <p>Ciao! Sono Giuseppe, un web developer full-stack con una formazione solida e pratica.<br/>
+                                Ho iniziato il mio percorso con un corso intensivo di 6 mesi in cui ho appreso HTML, CSS e JavaScript, per poi specializzarmi in React.js, Node.js, Express, PHP, Laravel e SQL. Successivamente ho approfondito Java e Spring Boot attraverso un secondo corso di studi.<br/><br/>
+                                Durante la formazione ho realizzato progetti completi che integrano front-end responsive e back-end scalabili, consolidando un forte interesse per lo sviluppo server-side.<br/>
+                                Mi contraddistinguono un approccio pratico e orientato al problem solving, la curiosità verso nuove tecnologie e la predisposizione al lavoro in team. Attualmente sono alla ricerca di opportunità per crescere come professionista e contribuire a progetti innovativi.</p>
                         </div>
 
                         <div className="align-right tag-section-desktop">

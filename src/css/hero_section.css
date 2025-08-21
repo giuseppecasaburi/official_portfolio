@@ -2,6 +2,7 @@
 
 #hero-section {
     height: calc(100vh - 72px);
+    position: relative;
 }
 
 #right {
@@ -133,8 +134,8 @@
 .scroll-button {
     animation: bounce-down-up 2s infinite ease-in-out;
     transition: transform 0.3s;
+    font-style: italic;
 }
-
 
 /* RESPONSIVE    */
 @media screen and (max-width: 1024px) {
