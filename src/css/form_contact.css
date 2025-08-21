@@ -23,8 +23,8 @@ form {
 
 .user-data input,
 .mess-area textarea {
-    background-color: white;
-    color: blue;
+    background-color: #ffffff;
+    color: #0000ff;
     width: 100%;
     border-radius: 20px;
     padding: 10px 10px;
@@ -37,6 +37,21 @@ form {
 .form-button {
     width: 100%;
     margin: 20px 0;
+}
+
+.error,
+.success {
+    text-transform: uppercase;
+    padding: 4px 10px;
+    text-align: center;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {

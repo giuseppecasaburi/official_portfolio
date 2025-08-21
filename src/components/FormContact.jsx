@@ -5,8 +5,8 @@ function FormContact() {
         name: "",
         surname: "",
         email: "",
-        phone: "",
-        text: "",
+        phoneNumber: "",
+        message: "",
     }
 
     const [emailData, setEmailData] = useState(initialEmailData);
@@ -19,7 +19,6 @@ function FormContact() {
         const { name, value } = e.target;
         setEmailData({ ...emailData, [name]: value });
         console.log(emailData);
-
     };
 
 
@@ -30,7 +29,7 @@ function FormContact() {
         setMessage("Invio in corso...");
 
         try {
-            const response = await fetch(`${apiUrl}/send-email`, {
+            const response = await fetch("http://localhost:3000/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -47,13 +46,16 @@ function FormContact() {
 
                 setTimeout(() => {
                     setMessage("");
-                }, 3000);
+                }, 5000);
             } else {
                 setMessage("");
                 setErrors({
                     ...errors,
-                    form: data.message,
+                    type: data.type,
+                    message: data.message,
                 });
+                console.log(errors);
+
             }
         } catch (error) {
             console.error("Errore:", error);
@@ -69,7 +71,7 @@ function FormContact() {
             <form onSubmit={sendEmail} className="">
                 <div className="user-data">
                     <div className="primi">
-                        <label className="">
+                        <label htmlFor="name" className="">
                             Nome
                         </label>
                         <input
@@ -80,10 +82,10 @@ function FormContact() {
                             placeholder="Scrivi il tuo nome"
                             required
                         />
-                        {errors.name && <span className="">{errors.name}</span>}
+                        {errors.type == "name" ? <p className="error">{errors.message}</p> : null}
                     </div>
                     <div className="primi">
-                        <label className="">
+                        <label htmlFor="surname" className="">
                             Cognome
                         </label>
                         <input
@@ -92,12 +94,11 @@ function FormContact() {
                             value={emailData.surname}
                             onChange={handleChange}
                             placeholder="Scrivi il tuo cognome"
-                            required
                         />
-                        {errors.surname && <span className="error">{errors.surname}</span>}
+                        {errors.type == "surname" ? <p className="error">{errors.message}</p> : null}
                     </div>
                     <div className="primi">
-                        <label className="">
+                        <label htmlFor="email" className="">
                             Email
                         </label>
                         <input
@@ -108,44 +109,43 @@ function FormContact() {
                             placeholder="Scrivi la tua email"
                             required
                         />
-                        {errors.email && <span className="">{errors.email}</span>}
+                        {errors.type == "email" ? <p className="error">{errors.message}</p> : null}
                     </div>
                     <div className="primi">
-                        <label className="">
+                        <label htmlFor="phoneNumber" className="">
                             Telefono
                         </label>
                         <input
                             type="text"
-                            name="phone"
-                            value={emailData.phone}
+                            name="phoneNumber"
+                            value={emailData.phoneNumber}
                             onChange={handleChange}
                             placeholder="Scrivi il tuo numero di telefono"
-                            required
                         />
-                        {errors.phone && <span className="">{errors.phone}</span>}
+                        {errors.type == "phoneNumber" ? <p className="error">{errors.message}</p> : null}
                     </div>
                 </div>
 
                 <div className="mess-area">
-                    <label className="">
+                    <label htmlFor="message" className="">
                         Messaggio
                     </label>
                     <textarea
-                        name="text"
-                        value={emailData.text}
+                        name="message"
+                        value={emailData.message}
                         onChange={handleChange}
                         placeholder="Scrivi il tuo messaggio"
                         required
                     ></textarea>
-                    {errors.text && <span className="">{errors.text}</span>}
+                    {errors.type == "message" ? <p className="error">{errors.message}</p> : null}
                 </div>
 
                 <button type="submit" disabled={loading} className="card-button form-button">
                     {loading ? "..." : "Invia Email"}
                 </button>
+                {message && <p className="success">{message}</p>}
+                {errors.type == "generic" ? <p className="error">{errors.message}</p> : null}
             </form>
-            {message && <p>{message}</p>}
-            {errors.form && <div className="">{errors.form}</div>}
         </>
     )
 }
