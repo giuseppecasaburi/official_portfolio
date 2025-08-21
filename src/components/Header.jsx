@@ -1,8 +1,6 @@
-import { FaRegLightbulb, FaLightbulb } from 'react-icons/fa';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Header() {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -13,11 +11,49 @@ function Header() {
         setIsMenuOpen(false);
     };
 
+    const useScrollPosition = () => {
+        const [scrollPosition, setScrollPosition] = useState(0);
+
+        useEffect(() => {
+            const updatePosition = () => {
+                setScrollPosition(window.pageYOffset);
+            };
+
+            window.addEventListener('scroll', updatePosition);
+            updatePosition();
+
+            return () => window.removeEventListener('scroll', updatePosition);
+        }, []);
+
+        return scrollPosition;
+    };
+
+    const [isSticky, setIsSticky] = useState(false);
+    const [headerHeight, setHeaderHeight] = useState(0);
+    const headerRef = useRef(null);
+    const scrollPosition = useScrollPosition();
+
+    useEffect(() => {
+        if (headerRef.current) {
+            setHeaderHeight(headerRef.current.offsetHeight);
+        }
+    }, []);
+
+    useEffect(() => {
+        setIsSticky(scrollPosition > 1);
+    }, [scrollPosition]);
+
     return (
         <>
-            <header id='header'>
+            <header id='header' ref={headerRef}
+                className={`header ${isSticky ? 'sticky' : ''} ${isSticky ? 'fixed' : 'relative'}`}
+                style={{
+                    backgroundColor: isSticky ? 'rgba(0, 0, 0, 0.95)' : 'transparent',
+                    borderBottom: isSticky ? '1px solid rgba(255, 255, 255, 0.5)' : 'none',
+                    boxShadow: isSticky ? '0 2px 20px rgba(0, 0, 0, 0.1)' : 'none'
+                }}>
                 <nav className="mx-auto flex max-w-7xl items-center justify-between text-white p-6 md:px-8" aria-label="Global">
-                    <div className="flex md:flex-1">
+                    <div className="flex md:hidden md:flex-1">
                         <a href="#" className="md:hidden -m-1.5 p-1.5">
                             <img className="h-8 w-auto" src="../img/logo.png" alt="logo giuseppe casaburi" />
                         </a>
@@ -34,15 +70,12 @@ function Header() {
                             </svg>
                         </button>
                     </div>
-                    <div className="hidden md:flex md:gap-x-12">
+                    <div className="hidden justify-center ms-w-100 md:flex md:gap-x-12">
                         <a className="link-header" href="#header">Home</a>
                         <a className="link-header" href="#about-me">About Me</a>
                         <a className="link-header" href="#projects-area">Progetti</a>
                         <a className="link-header" href="#skills-area">Skills</a>
                         <a className="link-header" href="#contacts-area">Contatti</a>
-                    </div>
-                    <div className="hidden md:flex md:flex-1 md:justify-end">
-                        <FaRegLightbulb size={24} color="white" />
                     </div>
                 </nav>
 
@@ -53,7 +86,7 @@ function Header() {
                     <div id='side-menu' className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <img className="h-8 w-auto" src="../img/logo.png" alt="logo giuseppe casaburi" />
+                                <img className="h-8 w-auto  ms-hidden" src="../img/logo.png" alt="logo giuseppe casaburi" />
                             </a>
                             <button
                                 type="button"
@@ -75,14 +108,16 @@ function Header() {
                                     <a href="#skills-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Skills</a>
                                     <a href="#contacts-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Contatti</a>
                                 </div>
-                                <div className="py-6">
-                                    <FaRegLightbulb size={24} color="white" onClick={closeMenu}/>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
+            
+            {/* Spacer per evitare il salto quando diventa fixed */}
+            {isSticky && (
+                <div style={{ height: headerHeight }} />
+            )}
         </>
     )
 }

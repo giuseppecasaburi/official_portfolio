@@ -33,3 +33,9 @@ img {
 .ms-h-100 {
     height: 100%;
 }
+
+@media screen and (min-width:625px) {
+    .ms-hidden {
+        display: none;
+    }
+}
