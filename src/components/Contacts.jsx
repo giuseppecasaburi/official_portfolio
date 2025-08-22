@@ -39,7 +39,7 @@ function Contacts() {
                                     <i className="devicon-linkedin-plain"></i>
                                 </div>
                                 <div className="cont-content">
-                                    <a href="www.linkedin.com/in/giuseppe-casaburi-32b91a188" target="_blank"
+                                    <a href="https://www.linkedin.com/in/giuseppe-casaburi-32b91a188" target="_blank"
                                         rel="noopener noreferrer">Linkedin</a>
                                 </div>
                             </div>

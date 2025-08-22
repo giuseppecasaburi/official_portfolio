@@ -102,7 +102,7 @@ function Header() {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    <a href="#header" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Home</a>
+                                    <a href="#hero-section" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Home</a>
                                     <a href="#about-me" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>About Me</a>
                                     <a href="#projects-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Project</a>
                                     <a href="#skills-area" className="-mx-3 block rounded-lg px-3 py-2 font-semibold touch-manipulation" onClick={closeMenu}>Skills</a>

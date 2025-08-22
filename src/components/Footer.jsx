@@ -4,7 +4,7 @@ function Footer() {
             <footer>
                 <div className="footer-container">
                     <div className="link">
-                        <a className="link-header" href="#header">Home</a>
+                        <a className="link-header" href="#hero-section">Home</a>
                         <a className="link-header" href="#about-me">About Me</a>
                         <a className="link-header" href="#projects-area">Progetti</a>
                         <a className="link-header" href="#skills-area">Skills</a>
