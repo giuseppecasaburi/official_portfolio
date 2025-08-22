@@ -7,6 +7,7 @@ function FormContact() {
         email: "",
         phoneNumber: "",
         message: "",
+        policy: true,
     }
 
     const [emailData, setEmailData] = useState(initialEmailData);
@@ -16,9 +17,8 @@ function FormContact() {
 
     // Funzione per aggiornare lo stato dei campi
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setEmailData({ ...emailData, [name]: value });
-        console.log(emailData);
+        const { name, value, type, checked } = e.target;
+        setEmailData({ ...emailData, [name]: type === "checkbox" ? checked : value });
     };
 
 
@@ -55,7 +55,6 @@ function FormContact() {
                     message: data.message,
                 });
                 console.log(errors);
-
             }
         } catch (error) {
             console.error("Errore:", error);
@@ -72,7 +71,7 @@ function FormContact() {
                 <div className="user-data">
                     <div className="primi">
                         <label htmlFor="name" className="">
-                            Nome
+                            Nome*
                         </label>
                         <input
                             type="text"
@@ -99,7 +98,7 @@ function FormContact() {
                     </div>
                     <div className="primi">
                         <label htmlFor="email" className="">
-                            Email
+                            Email*
                         </label>
                         <input
                             type="email"
@@ -128,7 +127,7 @@ function FormContact() {
 
                 <div className="mess-area">
                     <label htmlFor="message" className="">
-                        Messaggio
+                        Messaggio*
                     </label>
                     <textarea
                         name="message"
@@ -140,6 +139,20 @@ function FormContact() {
                     {errors.type == "message" ? <p className="error">{errors.message}</p> : null}
                 </div>
 
+                <div className="policy-area">
+                    <input
+                        type="checkbox"
+                        name="policy"
+                        id="policy"
+                        checked={emailData.policy}
+                        onChange={handleChange}
+                        required
+                    />
+                    <label htmlFor="policy"> Acconsento al trattamento dei miei dati personali ai sensi della <a href="./privacy_policy__form_di_contatto.pdf" target="_blank"
+                        rel="noopener noreferrer">Privacy Policy</a>.</label>
+                </div>
+
+                <p className="notify">I campi contrassengati dal simbolo * sono obbligatori</p>
                 <button type="submit" disabled={loading} className="card-button form-button">
                     {loading ? "..." : "Invia Email"}
                 </button>

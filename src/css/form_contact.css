@@ -18,7 +18,20 @@ form {
 .user-data label,
 .mess-area label {
     display: block;
+    font-style: italic;
     padding: 10px 10px;
+}
+
+.policy-area {
+    padding: 10px 10px;
+}
+
+.policy-area a {
+    font-style: italic;
+}
+
+.policy-area a:hover {
+    text-decoration: underline;
 }
 
 .user-data input,
@@ -36,13 +49,19 @@ form {
 
 .form-button {
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .error,
 .success {
     text-transform: uppercase;
     padding: 4px 10px;
+}
+
+.notify {
+    margin: 20px 0 0;
+    font-size: 0.8rem;
+    font-style: italic;
     text-align: center;
 }
 
@@ -52,6 +71,7 @@ form {
 
 .success {
     color: #ffffff;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
