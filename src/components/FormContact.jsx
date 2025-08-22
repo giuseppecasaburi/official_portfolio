@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const BACK_END_URL = import.meta.env.VITE_BACK_END_URL;
+
 function FormContact() {
     const initialEmailData = {
         name: "",
@@ -29,7 +31,7 @@ function FormContact() {
         setMessage("Invio in corso...");
 
         try {
-            const response = await fetch("http://localhost:3000/contact", {
+            const response = await fetch(`${BACK_END_URL}contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
