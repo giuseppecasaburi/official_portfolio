@@ -80,7 +80,7 @@ function Header() {
                 </nav>
 
                 {/* Mobile menu, show/hide based on menu open state */}
-                <div className={`md:hidden text-white transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} role="dialog" aria-modal="true">
+                <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'visibility' : 'visibility-0'}`} role="dialog" aria-modal="true">
                     {/* Background backdrop */}
                     <div className="fixed inset-0 z-50" onClick={closeMenu}></div>
                     <div id='side-menu' className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
