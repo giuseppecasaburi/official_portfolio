@@ -11,12 +11,12 @@ const projects = [
                 "MySQL",
             ],
             img: [
-                "./img/mooviemood/home.jpeg",
-                "./img/mooviemood/moovies.jpeg",
-                "./img/mooviemood/single.jpeg",
-                "./img/mooviemood/directors.jpeg",
-                "./img/mooviemood/singled.jpeg",
-                "./img/mooviemood/search.jpeg",
+                "./img/mooviemood/home.png",
+                "./img/mooviemood/moovies.png",
+                "./img/mooviemood/single.png",
+                "./img/mooviemood/directors.png",
+                "./img/mooviemood/singled.png",
+                "./img/mooviemood/search.png",
             ],
         },
         {
