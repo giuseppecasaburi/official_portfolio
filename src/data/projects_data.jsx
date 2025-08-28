@@ -12,7 +12,7 @@ const projects = [
             ],
             img: [
                 "./img/mooviemood/home.png",
-                "./img/mooviemood/moovies.png",
+                "./img/mooviemood/movies.png",
                 "./img/mooviemood/single.png",
                 "./img/mooviemood/directors.png",
                 "./img/mooviemood/singled.png",
@@ -32,11 +32,11 @@ const projects = [
                 "MySQL",
             ],
             img: [
-                "./img/boolbnb/home.jpeg",
-                "./img/boolbnb/detail.jpeg",
-                "./img/boolbnb/create.jpeg",
-                "./img/boolbnb/search.jpeg",
-                "./img/boolbnb/searchr.jpeg"
+                "./img/boolbnb/home.png",
+                "./img/boolbnb/detail.png",
+                "./img/boolbnb/create.png",
+                "./img/boolbnb/search.png",
+                "./img/boolbnb/searchr.png"
             ],
         }
     ]
