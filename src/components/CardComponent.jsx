@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -20,6 +20,19 @@ function CardComponent(projects) {
             closeModal();
         }
     };
+
+    // Serve a bloccare lo scroll sottostante al modale
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'hidden';
+        }
+    }, [isModalOpen])
 
     return (
         <>

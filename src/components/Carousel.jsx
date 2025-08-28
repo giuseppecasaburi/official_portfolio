@@ -1,7 +1,7 @@
 import { faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Carousel({ imgArr }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,6 +37,20 @@ function Carousel({ imgArr }) {
             closeModal();
         }
     };
+
+
+    // Serve a bloccare lo scroll sottostante al modale
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'hidden';
+        }
+    }, [isModalOpen])
 
     return (
         <>
