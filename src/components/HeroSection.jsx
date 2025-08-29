@@ -18,7 +18,7 @@ function HeroSection() {
                         </div>
                         <div id="button-area" className="md:mt-2">
                             <a href="#contacts-area" className="illuminated-button ms-btn-d "><CiMail id="contact" size={20} className="inline-block "/> <span className="inline-block text-center">Contattami</span></a>
-                            <a href="./giuseppe.casaburi.pdf" target="_blank"
+                            <a href="./giuseppe.casaburi.cv.pdf" target="_blank"
                             rel="noopener noreferrer" className="illuminated-button ms-btn-d md:ms-3"><FaRegFilePdf size={20} className="inline-block "/> <span className="inline-block text-center">CV</span></a>
                         </div>
                     </div>
