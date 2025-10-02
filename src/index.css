@@ -24,6 +24,11 @@ img {
     display: block;
 }
 
+::selection {
+    background-color: white;
+    color: blue;
+}
+
 
 /* UTILITY */
 .ms-w-100 {

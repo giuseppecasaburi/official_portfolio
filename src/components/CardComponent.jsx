@@ -53,15 +53,28 @@ function CardComponent(projects) {
                         ))}
                     </div>
                     <div className="middle-part">
-                        <p>{projects.Projects.descrizione.slice(0, 180)}... <span className="load-more" onClick={openModal}>Continua a leggere</span></p>
+                        <p>
+                            {projects.Projects.descrizione.length > 179 ? (
+                                <>
+                                    {projects.Projects.descrizione.slice(0, 180)}... <span className="load-more" onClick={openModal}>Continua a leggere</span>
+                                </>
+                            )
+                                : projects.Projects.descrizione
+                            }
+                        </p>
                     </div>
                     <div className="end-part">
-                        <a href={projects.Projects.link_repo} className="card-button" target="_blank"
-                            rel="noopener noreferrer">GitHub
-                        </a>
-                        <a href={projects.Projects.link_demo} className="card-button" target="_blank"
-                            rel="noopener noreferrer">Demo
-                        </a>
+                        {projects.Projects.link_repo ? (
+                            <>
+                                <a href={projects.Projects.link_repo} className="card-button" target="_blank"
+                                    rel="noopener noreferrer">GitHub
+                                </a>
+                                <a href={projects.Projects.link_demo} className="card-button" target="_blank"
+                                    rel="noopener noreferrer">Demo
+                                </a>
+                            </>
+                        ) : ("")
+                        }
                     </div>
                 </div>
             </div>

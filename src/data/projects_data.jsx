@@ -38,6 +38,24 @@ const projects = [
                 "./img/boolbnb/search.png",
                 "./img/boolbnb/searchr.png"
             ],
+        },
+        {
+            name: "Vica Arredo Bagno",
+            logo: "./img/w_i_p.png",
+            link_demo: "",
+            link_repo: "",
+            descrizione: `WORK IN PROGRESS, SEE YOU SOON! `,
+            tecnologie: [
+                "JavaScript",
+                "React",
+                "PHP",
+                "MySQL",
+                "Figma",
+            ],
+            img: [
+                "./img/w_i_p.png",
+                
+            ],
         }
     ]
 

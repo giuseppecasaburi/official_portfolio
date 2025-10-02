@@ -13,6 +13,7 @@ function Projects() {
                         <h2 className="pa-title">Progetti</h2>
                     </div>
                     <div className="row">
+                        <CardComponent Projects={projects[2]} />
                         <CardComponent Projects={projects[0]} />
                         <CardComponent Projects={projects[1]} />
                     </div>
