@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://official-portfolio-two.vercel.app/sitemap.xml
+Sitemap: https://giuseppe-casaburi-official-portfolio.vercel.app/
