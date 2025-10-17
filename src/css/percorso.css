@@ -1,0 +1,58 @@
+@import './cerchio.css';
+
+#percorso-area {
+    margin: 100px 0;
+    padding: 20px 0;
+}
+
+.per-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.per-title {
+    background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contenitore-testi {
+    padding-left: 20px;
+}
+
+.contenitore {
+    width: 100%;
+    display: flex;
+}
+
+.box-perarea {
+    border: 1px solid #ffff;
+    width: 500px;
+    height: 100px;
+    margin: 30px 70px;
+    clip-path: polygon(20px 0,
+            /* taglio alto sinistra */
+            calc(100% - 20px) 0,
+            /* taglio alto destra */
+            100% 20px,
+            /* inclinazione lato destro */
+            100% calc(100% - 20px),
+            calc(100% - 20px) 100%,
+            /* taglio basso destra */
+            20px 100%,
+            /* taglio basso sinistra */
+            0 calc(100% - 20px),
+            0 20px
+        );
+}
