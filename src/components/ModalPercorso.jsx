@@ -2,7 +2,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 
-function ModalPercorso({isOpen, onClose, experience}) {
+function ModalPercorso({ isOpen, onClose, experience }) {
     const handleBackdropClick = (e) => {
         if (e.target === e.currentTarget) {
             onClose();
@@ -33,7 +33,7 @@ function ModalPercorso({isOpen, onClose, experience}) {
                     <div className="modal-header">
                         <div className="flex items-center">
                             <img className="w-15" src={experience.logo} alt="" />
-                            <h2 className="text-2xl font-bold ps-3">
+                            <h2 className="text-3xl font-bold ps-3">
                                 {experience.name}
                             </h2>
                         </div>
@@ -44,15 +44,23 @@ function ModalPercorso({isOpen, onClose, experience}) {
 
                     {/* Contenuto */}
                     <div className="modal-content">
-                        <h3 className="font-semibold mb-2">{experience.where}</h3>
-                        <p className="text-sm mb-4">{experience.descrizione}</p>
-                        <div className="tag-area">
-                        {experience.tecnologie.map((tecnologia, index) => (
-                            <span key={index} className="card-btn">{tecnologia}</span>
-                        ))}
+                        <div className="mb-3">
+                            <h3 className="font-semibold text-2xl">{experience.where}</h3>
+                            <p>{experience.when}</p>
+                        </div>
+                        <p
+                            className="text-sm mb-4"
+                            dangerouslySetInnerHTML={{
+                                __html: experience.descrizione.replace(/\n/g, "<br />"),
+                            }}
+                        ></p>
+                        <div id="tag-area-percorso" className="tag-area">
+                            {experience.tecnologie.map((tecnologia, index) => (
+                                <span key={index} className="card-btn">{tecnologia}</span>
+                            ))}
+                        </div>
                     </div>
-                    </div>
-                    
+
                     {/* Footer */}
                     <div className="p-6 border-t flex justify-center">
                         <button onClick={onClose} className="card-button">
