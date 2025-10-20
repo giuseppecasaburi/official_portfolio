@@ -17,15 +17,15 @@ function Cerchio() {
         setIsModalOpen(false);
         setSelectedExperience(null);
     };
-    
+
 
     return (
         <>
-            <section>
+            <section id="cerchio">
 
                 <div class="percorso-container">
 
-                    <svg id="blocco" viewBox="0 0 1100 600" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="blocco" viewBox="0 0 1340 600" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="510" cy="151" r="8" fill="white" className="connessione" />
                         <path class="linea-connessione" d="M 510 150 Q 750 90, 710 100" />
 
@@ -98,7 +98,67 @@ function Cerchio() {
                             </div>
                         </div>
                     </div>
-                    <ModalPercorso isOpen={isModalOpen} onClose={closeModal} experience={selectedExperience}/>
+                </div>
+
+                <ModalPercorso isOpen={isModalOpen} onClose={closeModal} experience={selectedExperience} />
+                
+                <div className="section-mobile">
+                    <div class="cerchio-mobile">
+                        <div className="cerchio-2-mobile">
+                            <div className="cerchio-interno-mobile">
+                                <FontAwesomeIcon icon={faBriefcase} />
+                                <h3>Il mio percorso</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="retta"></div>
+                    <div className="box-percorso-mobile">
+                        <div className="icona"><img src={experience[0].logo} alt="" /></div>
+                        <div className="testo-box">
+                            <h4>{experience[0].name}</h4>
+                            <p>{experience[0].where}</p>
+                            <p>{experience[0].when}</p>
+                        </div>
+                        <div className="cont-button">
+                            <button className="button" onClick={() => openModal(experience[0])}>Dettagli</button>
+                        </div>
+                    </div>
+                    <div className="retta"></div>
+                    <div className="box-percorso-mobile">
+                        <div className="icona"><img src={experience[1].logo} alt="" /></div>
+                        <div className="testo-box">
+                            <h4>{experience[1].name}</h4>
+                            <p>{experience[1].where}</p>
+                            <p>{experience[1].when}</p>
+                        </div>
+                        <div className="cont-button">
+                            <button className="button" onClick={() => openModal(experience[1])}>Dettagli</button>
+                        </div>
+                    </div>
+                    <div className="retta"></div>
+                    <div className="box-percorso-mobile">
+                        <div className="icona"><img src={experience[2].logo} alt="" /></div>
+                        <div className="testo-box">
+                            <h4>{experience[2].name}</h4>
+                            <p>{experience[2].where}</p>
+                            <p>{experience[2].when}</p>
+                        </div>
+                        <div className="cont-button">
+                            <button className="button" onClick={() => openModal(experience[2])}>Dettagli</button>
+                        </div>
+                    </div>
+                    <div className="retta"></div>
+                    <div className="box-percorso-mobile">
+                        <div className="icona"><img src={experience[3].logo} alt="" /></div>
+                        <div className="testo-box">
+                            <h4>{experience[3].name}</h4>
+                            <p>{experience[3].where}</p>
+                            <p>{experience[3].when}</p>
+                        </div>
+                        <div className="cont-button">
+                            <button className="button" onClick={() => openModal(experience[3])}>Dettagli</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
