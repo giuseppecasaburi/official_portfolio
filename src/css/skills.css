@@ -11,11 +11,15 @@
 
 #sa-title-area {
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 
 #sa-title {
     width: 40%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 .tab-section {

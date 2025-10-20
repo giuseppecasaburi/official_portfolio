@@ -13,15 +13,16 @@
 
 .pa-title {
     background: radial-gradient(circle at center, #5e0ced 0%, #4c11d6 100%);
-    display: inline-block;
+    display: block;
+    margin-left: auto;
     padding: 1rem 1rem;
     margin-bottom: 40px;
     font-size: 1.8rem;
     width: 40%;
     text-align: center;
     font-weight: bold;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
     border-bottom: 3px solid #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
