@@ -13,7 +13,7 @@ function HeroSection() {
                         <div id="tag" className="md:py-5">
                             <span className="rtw-button ms-btn-d rounded-full md:my-1">
                                 <span id="disponibile"></span>
-                                Disponibile per lavorare
+                                Disponibile per progetti Freelance
                             </span>
                         </div>
                         <div id="button-area" className="md:mt-2">
