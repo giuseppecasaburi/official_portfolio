@@ -152,6 +152,7 @@
 @media screen and (max-width: 768px) {
     #hero-section {
         height: calc(100vh - 80px);
+        height: calc(100dvh - 80px);
         background-image:
             linear-gradient(to bottom,
                 rgba(0, 0, 0, 0) 0%,
