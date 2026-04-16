@@ -14,7 +14,7 @@ function Footer() {
                         <img src="./img/logo.png" alt="Logo del profilo" />
                     </div>
                     <div className="policy">
-                        <p>© 2025 Giuseppe Casaburi - Tutti i diritti riservati.</p>
+                        <p>© 2026 Giuseppe Casaburi - Tutti i diritti riservati.</p>
                     </div>
                 </div>
             </footer>

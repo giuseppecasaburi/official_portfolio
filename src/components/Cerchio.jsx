@@ -57,8 +57,8 @@ function Cerchio() {
                                 <p>{experience[3].where}</p>
                                 <p>{experience[3].when}</p>
                             </div>
-                            <div className="cont-button">
-                                <button className="button" onClick={() => openModal(experience[3])}>Dettagli</button>
+                            <div className="cont-button" onClick={() => openModal(experience[3])}>
+                                <button className="button">Dettagli</button>
                             </div>
                         </div>
 
@@ -69,8 +69,8 @@ function Cerchio() {
                                 <p>{experience[2].where}</p>
                                 <p>{experience[2].when}</p>
                             </div>
-                            <div className="cont-button">
-                                <button className="button" onClick={() => openModal(experience[2])}>Dettagli</button>
+                            <div className="cont-button" onClick={() => openModal(experience[2])}>
+                                <button className="button">Dettagli</button>
                             </div>
                         </div>
 
@@ -81,8 +81,8 @@ function Cerchio() {
                                 <p>{experience[1].where}</p>
                                 <p>{experience[1].when}</p>
                             </div>
-                            <div className="cont-button">
-                                <button className="button" onClick={() => openModal(experience[1])}>Dettagli</button>
+                            <div className="cont-button" onClick={() => openModal(experience[1])}>
+                                <button className="button">Dettagli</button>
                             </div>
                         </div>
 
@@ -93,8 +93,8 @@ function Cerchio() {
                                 <p>{experience[0].where}</p>
                                 <p>{experience[0].when}</p>
                             </div>
-                            <div className="cont-button">
-                                <button className="button" onClick={() => openModal(experience[0])}>Dettagli</button>
+                            <div className="cont-button" onClick={() => openModal(experience[0])}>
+                                <button className="button">Dettagli</button>
                             </div>
                         </div>
                     </div>
@@ -113,26 +113,14 @@ function Cerchio() {
                     </div>
                     <div className="retta"></div>
                     <div className="box-percorso-mobile">
-                        <div className="icona"><img src={experience[0].logo} alt="" /></div>
+                        <div className="icona"><img src={experience[3].logo} alt="" /></div>
                         <div className="testo-box">
-                            <h4>{experience[0].name}</h4>
-                            <p>{experience[0].where}</p>
-                            <p>{experience[0].when}</p>
+                            <h4>{experience[3].name}</h4>
+                            <p>{experience[3].where}</p>
+                            <p>{experience[3].when}</p>
                         </div>
-                        <div className="cont-button">
-                            <button className="button" onClick={() => openModal(experience[0])}>Dettagli</button>
-                        </div>
-                    </div>
-                    <div className="retta"></div>
-                    <div className="box-percorso-mobile">
-                        <div className="icona"><img src={experience[1].logo} alt="" /></div>
-                        <div className="testo-box">
-                            <h4>{experience[1].name}</h4>
-                            <p>{experience[1].where}</p>
-                            <p>{experience[1].when}</p>
-                        </div>
-                        <div className="cont-button">
-                            <button className="button" onClick={() => openModal(experience[1])}>Dettagli</button>
+                        <div className="cont-button"  onClick={() => openModal(experience[3])}>
+                            <button className="button">Dettagli</button>
                         </div>
                     </div>
                     <div className="retta"></div>
@@ -143,20 +131,32 @@ function Cerchio() {
                             <p>{experience[2].where}</p>
                             <p>{experience[2].when}</p>
                         </div>
-                        <div className="cont-button">
-                            <button className="button" onClick={() => openModal(experience[2])}>Dettagli</button>
+                        <div className="cont-button" onClick={() => openModal(experience[2])}>
+                            <button className="button">Dettagli</button>
                         </div>
                     </div>
                     <div className="retta"></div>
                     <div className="box-percorso-mobile">
-                        <div className="icona"><img src={experience[3].logo} alt="" /></div>
+                        <div className="icona"><img src={experience[1].logo} alt="" /></div>
                         <div className="testo-box">
-                            <h4>{experience[3].name}</h4>
-                            <p>{experience[3].where}</p>
-                            <p>{experience[3].when}</p>
+                            <h4>{experience[1].name}</h4>
+                            <p>{experience[1].where}</p>
+                            <p>{experience[1].when}</p>
                         </div>
-                        <div className="cont-button">
-                            <button className="button" onClick={() => openModal(experience[3])}>Dettagli</button>
+                        <div className="cont-button" onClick={() => openModal(experience[1])}>
+                            <button className="button">Dettagli</button>
+                        </div>
+                    </div>
+                    <div className="retta"></div>
+                    <div className="box-percorso-mobile">
+                        <div className="icona"><img src={experience[0].logo} alt="" /></div>
+                        <div className="testo-box">
+                            <h4>{experience[0].name}</h4>
+                            <p>{experience[0].where}</p>
+                            <p>{experience[0].when}</p>
+                        </div>
+                        <div className="cont-button" onClick={() => openModal(experience[0])}>
+                            <button className="button">Dettagli</button>
                         </div>
                     </div>
                 </div>

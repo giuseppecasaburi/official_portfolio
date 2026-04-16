@@ -37,11 +37,12 @@ function AboutMe() {
                         </div>
 
                         <div className="align-right">
-                            <p>Ciao! Sono Giuseppe, un web developer full-stack con una formazione solida e pratica.<br/>
-                                Ho iniziato il mio percorso con un corso intensivo di 6 mesi in cui ho appreso HTML, CSS e JavaScript, per poi specializzarmi in React.js, Node.js, Express, PHP, Laravel e SQL. Successivamente ho approfondito Java e Spring Boot attraverso un secondo corso di studi.<br/><br/>
-                                Durante la formazione ho realizzato progetti completi che integrano front-end responsive e back-end scalabili, consolidando un forte interesse per lo sviluppo server-side.<br/>
-                                Mi contraddistinguono un approccio pratico e orientato al problem solving, la curiosità verso nuove tecnologie e la predisposizione al lavoro in team. Attualmente sono alla ricerca di opportunità per crescere come professionista e contribuire a progetti innovativi.</p>
-                        </div>
+                            <p><strong>Ciao! Sono Giuseppe, full-stack developer specializzato in CMS custom, flussi OTA e applicazioni web complete.</strong><br /><br />
+                                Sviluppo soluzioni end-to-end con <strong>PHP, React, MySQL</strong> e integrazioni API (PayPal, ActiveCampaign), dalla progettazione wireframe alla consegna deployata su Vercel/Netlify.<br />
+                                <strong>Realizzo:</strong> back-office con autorizzazioni, sistemi di booking, calendari editoriali e workflow automatizzati.<br /><br />
+                                <strong>Portami la tua idea,</strong> la trasformo in un sistema scalabile e performante.
+                                </p>
+                            </div>
 
                         <div className="align-right tag-section-desktop">
                             <div className="am-tab">
