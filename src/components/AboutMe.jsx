@@ -37,7 +37,7 @@ function AboutMe() {
                         </div>
 
                         <div className="align-right">
-                            <p><strong>Ciao! Sono Giuseppe, full-stack developer specializzato in CMS custom, flussi OTA e applicazioni web complete.</strong><br /><br />
+                            <p><strong>Ciao! Sono Giuseppe, full-stack developer specializzato in CMS custom, integrazioni con servizi esterni e applicazioni web complete.</strong><br /><br />
                                 Sviluppo soluzioni end-to-end con <strong>PHP, React, MySQL</strong> e integrazioni API (PayPal, ActiveCampaign), dalla progettazione wireframe alla consegna deployata su Vercel/Netlify.<br />
                                 <strong>Realizzo:</strong> back-office con autorizzazioni, sistemi di booking, calendari editoriali e workflow automatizzati.<br /><br />
                                 <strong>Portami la tua idea,</strong> la trasformo in un sistema scalabile e performante.

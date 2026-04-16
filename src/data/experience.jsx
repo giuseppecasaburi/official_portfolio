@@ -4,7 +4,7 @@ const experience = [
         where: "Boolean Carrers",
         when: "09/2024 - 05/2025",
         logo: "./img/boolean_logo.png",
-        descrizione : "Il mio percorso di formazione pratica presso Boolean mi ha portato a sviluppare applicazioni web complete, dalla progettazione iniziale allo sviluppo e deploy. Ho lavorato su progetti reali in team, padroneggiando frontend (React, JavaScript) e backend (PHP, MySQL, Node.js), con Git, Postman e metodologie agili come pair programming. <br><br>Oggi applico queste basi su CMS custom, workflow OTA e progetti freelance end-to-end.",
+        descrizione : "Il mio percorso di formazione pratica presso Boolean mi ha portato a sviluppare applicazioni web complete, dalla progettazione iniziale allo sviluppo e deploy. Ho lavorato su progetti reali in team, padroneggiando frontend (React, JavaScript) e backend (PHP, MySQL, Node.js), con Git, Postman e metodologie agili come pair programming. <br><br>Oggi applico queste basi su CMS custom, integrazioni con servizi esterni e progetti freelance end-to-end.",
         tecnologie: [
             "HTML5",
             "CSS3",
@@ -54,7 +54,7 @@ const experience = [
         where: "VisitItaly",
         when: "09/2025 - Presente",
         logo: "./img/visit_logo.jpg",
-        descrizione: `Attualmente ricopro il ruolo di <b>Back-end</b> Developer all’interno di VisitItaly, una realtà dinamica specializzata in promozione territoriale.\n\nIn questo contesto, ho modo di crescere ogni giorno affrontando sfide tecniche e lavorando fianco a fianco con una figura Senior. <br>Lavoro su piattaforme custom PHP/JS/MySQL: sviluppo e manutenzione CMS, creazione endpoint API REST per integrazioni esterne (PayPal, OTA), ottimizzazione query database e gestione completa dei flussi di acquisto end-to-end (carrello, conferma ordine, notifiche email, ticket, alert con error handling).`,
+        descrizione: `Attualmente ricopro il ruolo di <b>Back-end</b> Developer all’interno di VisitItaly, una realtà dinamica specializzata in promozione territoriale.\n\nIn questo contesto, ho modo di crescere ogni giorno affrontando sfide tecniche e lavorando fianco a fianco con una figura Senior. <br>Lavoro su piattaforme custom PHP/JS/MySQL: sviluppo e manutenzione CMS, creazione endpoint API REST per integrazioni esterne (PayPal, ActiveCampaign, Agentic Commerce, etc...), ottimizzazione query database e gestione completa dei flussi di acquisto end-to-end (carrello, conferma ordine, notifiche email, ticket, alert con error handling).`,
         tecnologie: [
             "JavaScript",
             "PHP",
